@@ -3,6 +3,11 @@ import "./home.scss";
 import video from "../../Assets/video.mp4";
 import {GrLocation} from "react-icons/gr";
 import {HiFilter} from "react-icons/hi";
+import {AiOutlineInstagram} from "react-icons/ai";
+import {FiFacebook} from "react-icons/fi";
+import {FaTwitter} from "react-icons/fa";
+import {TbApps} from "react-icons/tb";
+import {BsListTask} from "react-icons/bs";
 
 const Home = () => {
   return (
@@ -50,6 +55,20 @@ const Home = () => {
 
         </div>
         
+        <div className="homeFooterIcons flex">
+
+          <div className="rightIcon">
+            <FiFacebook className="icon"/>
+            <AiOutlineInstagram className="icon"/>
+            <FaTwitter className='icon'/>
+          </div>
+
+          <div className="leftIcon">
+            <BsListTask className="icon" />
+            <TbApps className="icon" />
+          </div>
+
+        </div>
       </div>
     </section>
   );
