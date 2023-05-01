@@ -18,8 +18,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    z-index: 999;
     width: 100%;
-    background-color: var(--whiteColorDeam);
+    background: var(--whiteColorDeam);
     box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
 
     .logo{

@@ -55,7 +55,7 @@ li{
 
 .btn{
   padding: .6rem 1.5rem;
-  background-image: var(--gradientColor);
+  background: var(--gradientColor);
   border-radius: 3rem;
   border: none;
   outline: none;
@@ -68,7 +68,7 @@ li{
 }
 
 .btn:hover{
-  background-color: var(--SecondaryColor);
+  background: var(--SecondaryColor);
 }
 
 img, video{
