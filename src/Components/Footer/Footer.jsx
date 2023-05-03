@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./footer.scss";
 import video2 from "../../Assets/video2.mp4";
 import { FiSend } from "react-icons/fi";
-import { MdOutlineTravelExplore } from "react-icons/md";
+import { SiYourtraveldottv } from "react-icons/si";
 import {
   AiOutlineTwitter,
   AiOutlineInstagram,
@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="footerIntro flex">
             <div className="logoDiv">
               <a href="#" className="logo flex">
-                <MdOutlineTravelExplore className="icon" /> Travel.
+                <SiYourtraveldottv className="icon" /> Travel.
               </a>
             </div>
 
