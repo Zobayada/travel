@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="footerIntro flex">
             <div className="logoDiv">
               <a href="#" className="logo flex">
-                <MdOutlineTravelExplore /> Travel.
+                <MdOutlineTravelExplore className="icon" /> Travel.
               </a>
             </div>
 
@@ -59,6 +59,8 @@ const Footer = () => {
           </div>
 
           <div className="footerLink grid">
+            {/* Group one  */}
+
             <div className="linkGroup">
               <span className="groupTitle">OUR AGENCY</span>
 
@@ -86,9 +88,76 @@ const Footer = () => {
                 <FiChevronRight className="icon" />
                 Payment
               </li>
-              
+            </div>
+
+            {/* Group two  */}
+
+            <div className="linkGroup">
+              <span className="groupTitle">PARTNERS</span>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                Bookings
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                Rentcars
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                HostelWorld
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                Trivago
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                TripAdvisor
+              </li>
+            </div>
+
+            {/* Group three  */}
+
+            <div className="linkGroup">
+              <span className="groupTitle">LAST MINUTE</span>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                London
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                California
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                Indonesia
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                Europe
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon" />
+                Oceania
+              </li>
             </div>
           </div>
+
+          <div className="footerDiv flex">
+            <small>BEST TRAVEL WEBSITE THEME</small>
+            <small>COPYRIGHT RESERVED - AFNAN 2023</small>
+          </div>
+          
         </div>
       </div>
     </section>
