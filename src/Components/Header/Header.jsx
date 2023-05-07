@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import "./home.scss";
+import "./Header.scss";
 import video from "../../Assets/video.mp4";
 import {GrLocation} from "react-icons/gr";
 import {HiFilter} from "react-icons/hi";
@@ -12,11 +12,10 @@ import {BsListTask} from "react-icons/bs";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Home = () => {
-
+const Header = () => {
   useEffect(() => {
-    Aos.init({duration: 2000})
-  }, [])
+    Aos.init({ duration: 2000 });
+  }, []);
 
   return (
     <section className="home">
@@ -80,6 +79,6 @@ const Home = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Home
+export default Header;

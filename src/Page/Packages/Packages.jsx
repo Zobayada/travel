@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import "./main.scss";
+import "./Packages.scss";
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from "react-icons/hi";
 import img from "../../Assets/img1.jpg";
 import img2 from "../../Assets/img2.jpg";
@@ -107,8 +107,7 @@ const Data = [
   },
 ];
 
-const Main = () => {
-
+const Packages = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -116,7 +115,7 @@ const Main = () => {
   return (
     <section className="main container section">
       <div className="secTitle">
-        <h3 data-aos="fade-right" className="title">  
+        <h3 data-aos="fade-right" className="title">
           Most Visited Destinations
         </h3>
       </div>
@@ -165,4 +164,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Packages;
