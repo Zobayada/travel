@@ -3,7 +3,7 @@
   --SecondaryColor: hsl(187, 85%, 43%);
   --gradientColor: linear-gradient(
     to right,
-    hsl(187, 85%, 43%),
+    rgba(255, 255, 255, 0.25),
     hsl(199, 100%, 33%)
   );
   --whiteColor: hsl(0, 0%, 100%);
@@ -17,69 +17,328 @@
 }
 
 .contact {
-  padding: 8rem 1.5rem 3rem;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
 
-  .contactTitle {
-    width: 45%;
+  .contactHeader {
+    padding: 8rem 1.5rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
 
-    .contitle {
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 40px;
-      word-spacing: 6px;
-      width: max-content;
-      position: relative;
-      color: var(--textColor);
-      margin: 1rem 0;
-      z-index: 2;
+    .contactTitle {
+      width: 45%;
 
-      &::after {
-        position: absolute;
-        content: "";
-        background: var(--SecondaryColor);
-        height: 5px;
-        width: 187px;
-        right: 0;
-        bottom: 5px;
-        z-index: -1;
+      .contitle {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 40px;
+        word-spacing: 6px;
+        width: max-content;
+        position: relative;
+        color: var(--textColor);
+        margin: 1rem 0;
+        z-index: 2;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: var(--SecondaryColor);
+          height: 5px;
+          width: 187px;
+          right: 0;
+          bottom: 5px;
+          z-index: -1;
+        }
+      }
+
+      p {
+        margin: 12px 0 0;
+        font-size: 14px;
+        color: var(--textColor);
+        font-weight: 400;
       }
     }
 
-    p {
-      margin: 12px 0 0;
-      font-size: 14px;
-      color: var(--textColor);
-      font-weight: 400;
+    .map {
+      width: 55%;
+      padding: 16px 0px 0px 28px;
+      iframe {
+        width: -webkit-fill-available;
+      }
     }
   }
 
-  .map {
-    width: 55%;
-    padding: 16px 0px 0px 28px;
-    iframe{
-      width: -webkit-fill-available;
+  .contactMsg {
+    background-size: cover;
+
+    .wrapper {
+      padding: 0rem 1.5rem 3rem;
+
+      .container {
+        .inner {
+          padding-top: 18px !important;
+          padding-right: 37px !important;
+          padding-bottom: 18px !important;
+          padding-left: 37px !important;
+          background-color: var(--SecondaryColor) !important;
+
+          h3 {
+            color: var(--whiteColor);
+            font-size: 30px;
+            line-height: 1.2em;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+          }
+
+          .contactInner {
+            form {
+              padding-top: 1rem;
+
+              .name_email {
+                display: flex;
+                position: relative;
+                float: left;
+                width: 100%;
+                min-height: 1px;
+                box-sizing: border-box;
+                padding-left: 3px;
+                padding-right: 3px;
+                justify-content: space-between;
+
+                .nameInput {
+                  position: relative;
+                  width: 49%;
+
+                  label {
+                    color: var(--whiteColor);
+                    padding-left: 5px;
+                  }
+
+                  .input {
+                    width: 100%;
+                    color: #fff;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+
+                    input {
+                      position: relative;
+                      width: 100%;
+                      margin: 0 0 6px;
+                      padding: 12px 16px;
+                      font-family: Poppins, sans-serif;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: calc(50px - 12px * 2);
+                      color: var(--whiteColor);
+                      background-color: rgba(255, 255, 255, 0.25);
+                      border: 0;
+                      border-radius: 0;
+                      outline: 0;
+                      cursor: auto;
+                      box-sizing: border-box;
+                      transition: color 0.2s ease-in-out;
+
+                      &::placeholder {
+                        color: var(--whiteColor);
+                      }
+                    }
+                  }
+                }
+                .emailInput {
+                  position: relative;
+                  width: 49%;
+
+                  label {
+                    color: var(--whiteColor);
+
+                    .contactIcon {
+                      font-size: 17px;
+                      margin-bottom: -2px;
+                    }
+                  }
+
+                  .input {
+                    width: 100%;
+                    color: #fff;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+
+                    input {
+                      position: relative;
+                      width: 100%;
+                      margin: 0 0 6px;
+                      padding: 12px 16px;
+                      font-family: Poppins, sans-serif;
+                      font-size: 14px;
+                      font-weight: 400;
+                      line-height: calc(50px - 12px * 2);
+                      color: var(--whiteColor);
+                      background-color: rgba(255, 255, 255, 0.25);
+                      border: 0;
+                      border-radius: 0;
+                      outline: 0;
+                      cursor: auto;
+                      box-sizing: border-box;
+                      transition: color 0.2s ease-in-out;
+
+                      &::placeholder {
+                        color: var(--whiteColor);
+                      }
+                    }
+                  }
+                }
+              }
+
+              .messageInput {
+                position: relative;
+                width: 100%;
+
+                label {
+                  color: var(--whiteColor);
+                  padding-left: 5px;
+
+                  .contactIcon {
+                    font-size: 17px;
+                    margin-bottom: -2px;
+                  }
+                }
+
+                .input {
+                  width: 100%;
+                  color: #fff;
+                  padding-top: 12px;
+                  padding-bottom: 12px;
+
+                  textarea {
+                    position: relative;
+                    width: 100%;
+                    margin: 0 0 6px;
+                    padding: 12px 16px;
+                    font-family: Poppins, sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: calc(50px - 12px * 2);
+                    color: var(--whiteColor);
+                    background-color: rgba(255, 255, 255, 0.25);
+                    border: 0;
+                    border-radius: 0;
+                    outline: 0;
+                    cursor: auto;
+                    box-sizing: border-box;
+                    transition: color 0.2s ease-in-out;
+
+                    &::placeholder {
+                      color: var(--whiteColor);
+                    }
+                  }
+                }
+              }
+
+              .btn {
+                width: 100%;
+                color: #fff;
+                border-radius: 0;
+                background: var(--gradientColor) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contactAddress {
+    padding: 0 1.5rem 3rem;
+
+    .inner {
+      box-sizing: border-box;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+
+      .wrapper {
+        display: flex;
+
+        .first {
+          box-sizing: border-box;
+          padding-left: 15px;
+          padding-right: 15px;
+          width: 100%;
+
+          h3 {
+            font-size: 30px;
+            line-height: 1.2em;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+          }
+          
+        }
+        .second {
+          box-sizing: border-box;
+          padding-left: 15px;
+          padding-right: 15px;
+          width: 100%;
+        }
+        .third {
+          box-sizing: border-box;
+          padding-left: 15px;
+          padding-right: 15px;
+          width: 100%;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 991px) {
   .contact {
-    padding: 0;
-    .contactTitle {
-      width: 100%;
-      padding: 8rem 8rem 3rem;
+    .contactHeader {
+      padding: 0;
+      .contactTitle {
+        width: 100%;
+        padding: 8rem 8rem 3rem;
+      }
+
+      .map {
+        padding: 0;
+        width: 100%;
+
+        iframe {
+          width: 100%;
+          height: 300px;
+        }
+      }
     }
 
-    .map {
-      padding: 0;
-      width: 100%;
+    .contactMsg {
+      .wrapper {
+        padding: 3rem 1.5rem 3rem;
+      }
+    }
+  }
+}
 
-      iframe {
-        width: 100%;
-        height: 300px;
+@media screen and (max-width: 768px) {
+  .contact {
+    .contactMsg {
+      .wrapper {
+        .container {
+          .inner {
+            .contactInner {
+              form {
+                .name_email {
+                  display: block;
+
+                  .nameInput {
+                    width: 100%;
+                  }
+                  .emailInput {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -87,15 +346,34 @@
 
 @media screen and (max-width: 565px) {
   .contact {
-    .contactTitle {
-      width: 100%;
-      padding: 8rem 2rem 3rem;
+    .contactHeader {
+      .contactTitle {
+        width: 100%;
+        padding: 8rem 2rem 3rem;
 
-      .contitle {
-        font-size: 20px;
+        .contitle {
+          font-size: 20px;
 
-        &::after {
-          width: 125px !important;
+          &::after {
+            width: 125px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .contact {
+    .contactMsg {
+      .wrapper {
+        .container {
+          padding: 0;
+          .inner {
+            h3 {
+              font-size: 22px;
+            }
+          }
         }
       }
     }

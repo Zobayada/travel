@@ -25,6 +25,11 @@
   --cardBG: rgb(225, 225, 235);
 }
 
+::selection {
+    background: var(--SecondaryColor);
+    color: #fff;
+}
+
 html {
   scroll-behavior: smooth;
 }
