@@ -3,7 +3,7 @@ import "./Contact.scss";
 import { FaUser } from "react-icons/fa";
 import { MdEmail, MdOutlineCall, MdLocationOn } from "react-icons/md";
 import { TiMessages } from "react-icons/ti";
-import {BsFillEnvelopeFill} from "react-icons/bs";
+import { BsFillEnvelopeFill } from "react-icons/bs";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -106,47 +106,53 @@ const Contact = () => {
                 Piqor sit.
               </p>
               <p>
-                <BsFillEnvelopeFill /> <span>afnan@qodeinteractive.com</span>
+                <BsFillEnvelopeFill className="addIcon" />
+                <span>afnan@qodeinteractive.com</span>
               </p>
               <p>
-                <MdOutlineCall /> <span>5544332211</span>
+                <MdOutlineCall className="addIcon" /> <span>5544332211</span>
               </p>
               <p>
-                <MdLocationOn /> <span>Place des Pyramides 7 Paris</span>
+                <MdLocationOn className="addIcon" />
+                <span>Place des Pyramides 7 Paris</span>
               </p>
             </div>
 
             <div className="second">
               <h3>London</h3>
-              <p>
+              <p className="text">
                 Agam fabulas. Ut audiam invenire iracun. Tn eam dimo diam ea.
                 Piqor sit.
               </p>
               <p>
-                <BsFillEnvelopeFill /> <span>afnan@qodeinteractive.com</span>
+                <BsFillEnvelopeFill className="addIcon" />
+                <span>afnan@qodeinteractive.com</span>
               </p>
               <p>
-                <MdOutlineCall /> <span>5544332211</span>
+                <MdOutlineCall className="addIcon" /> <span>5544332211</span>
               </p>
               <p>
-                <MdLocationOn /> <span>Place des Pyramides 7 Paris</span>
+                <MdLocationOn className="addIcon" />
+                <span>Place des Pyramides 7 Paris</span>
               </p>
             </div>
 
             <div className="third">
               <h3>New York</h3>
-              <p>
+              <p className="text">
                 Agam fabulas. Ut audiam invenire iracun. Tn eam dimo diam ea.
                 Piqor sit.
               </p>
               <p>
-                <BsFillEnvelopeFill /> <span>afnan@qodeinteractive.com</span>
+                <BsFillEnvelopeFill className="addIcon" />
+                <span>afnan@qodeinteractive.com</span>
               </p>
               <p>
-                <MdOutlineCall /> <span>5544332211</span>
+                <MdOutlineCall className="addIcon" /> <span>5544332211</span>
               </p>
               <p>
-                <MdLocationOn /> <span>Place des Pyramides 7 Paris</span>
+                <MdLocationOn className="addIcon" />
+                <span>Place des Pyramides 7 Paris</span>
               </p>
             </div>
           </div>

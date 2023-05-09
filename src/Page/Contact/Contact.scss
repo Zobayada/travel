@@ -270,19 +270,95 @@
             font-weight: 600;
             letter-spacing: -0.05em;
           }
-          
+          .text {
+            font-size: 14px;
+            margin: 10px 0;
+            width: auto;
+          }
+
+          p {
+            display: flex;
+            padding: 10px 0;
+            width: max-content;
+
+            .addIcon {
+              color: #3fd0d4;
+              font-size: 17px;
+              margin-top: 3px;
+            }
+            span {
+              padding: 0px 0px 0px 13px;
+              font-size: 14px;
+            }
+          }
         }
         .second {
           box-sizing: border-box;
           padding-left: 15px;
           padding-right: 15px;
           width: 100%;
+
+          h3 {
+            font-size: 30px;
+            line-height: 1.2em;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+          }
+          .text {
+            font-size: 14px;
+            margin: 10px 0;
+            width: auto;
+          }
+
+          p {
+            display: flex;
+            padding: 10px 0;
+            width: max-content;
+
+            .addIcon {
+              color: #3fd0d4;
+              font-size: 17px;
+              margin-top: 3px;
+            }
+            span {
+              padding: 0px 0px 0px 13px;
+              font-size: 14px;
+            }
+          }
         }
         .third {
           box-sizing: border-box;
           padding-left: 15px;
           padding-right: 15px;
           width: 100%;
+
+          h3 {
+            font-size: 30px;
+            line-height: 1.2em;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+          }
+          .text {
+            font-size: 14px;
+            margin: 10px 0;
+            width: auto;
+          }
+
+          p {
+            display: flex;
+            padding: 10px 0;
+            width: max-content;
+
+            .addIcon {
+              color: #3fd0d4;
+              font-size: 17px;
+              margin-top: 3px;
+            }
+            span {
+              padding: 0px 0px 0px 13px;
+              font-size: 14px;
+            }
+          }
         }
       }
     }
