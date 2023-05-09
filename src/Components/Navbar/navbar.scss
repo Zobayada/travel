@@ -1,172 +1,231 @@
 :root {
-    --PrimaryColor: hsl(199, 100%, 33%);
-    --SecondaryColor: hsl(187, 85%, 43%);
-    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
-    --whiteColor: hsl(0, 0%, 100%);
-    --blackColor: hsl(201, 33%, 16%);
-    --textColor: hsl(240, 4%, 36%);
-    --whiteColorDeam: hsl(0, 0%, 93%);
-    --greyText: rgb(190, 190, 190);
-    --inputColor: rgb(239, 239, 239);
-    --bodyColor: ■rgb(240, 240, 246);
-    --cardBG: rgb(225, 225, 235);
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: ■rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
 }
 
-.header{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    z-index: 999;
-    width: 100%;
-    background: var(--whiteColorDeam);
-    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  z-index: 999;
+  width: 100%;
+  background: var(--whiteColorDeam);
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
 
-    .logo{
-        color: var(--blackColor);
-        font-weight: 600;
+  .logo {
+    color: var(--blackColor);
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .icon {
+      font-size: 25px;
+      color: var(--PrimaryColor);
+      transform: translateY(5px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navBar {
+      position: absolute;
+      background: var(--whiteColorDeam);
+      height: max-content;
+      width: 80%;
+      border-radius: 1rem;
+      top: -500rem;
+      left: 50%;
+      padding: 1rem;
+      transform: translate(-50%);
+      z-index: 2000;
+      box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+      transition: 0.5s ease-in-out;
+
+      .navList {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem 0;
+
+        .navItem {
+          padding: 0.5rem 0;
+
+          .navLink {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--textColor);
+
+            &:hover {
+              color: var(--PrimaryColor);
+            }
+          }
+        }
+
+        .btn {
+          margin-top: 1rem;
+
+          a {
+            font-weight: 600;
+            color: var(--whiteColor);
+          }
+        }
+      }
+
+      .closeNavbar {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: var(--PrimaryColor);
+
+        &:hover {
+          color: var(--SecondaryColor);
+        }
+      }
+    }
+
+    .activeNavbar {
+      top: 7rem;
+    }
+  }
+
+  .toggleNavbar {
+    .icon {
+      font-size: 25px;
+      color: var(--PrimaryColor);
+    }
+    &:hover.icon {
+      color: var(--SecondaryColor);
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+
+    .navBar {
+      .navList {
+        display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
+        flex-direction: row;
 
-        .icon{
-            font-size: 25px;
-            color: var(--PrimaryColor);
-            transform: translateY(5px);
-        }
-    }
-
-    @media screen and (max-width: 768px){
-        .navBar {
+        .navItem {
+          .dropdown_menu {
             position: absolute;
+            top: 70px;
             background: var(--whiteColorDeam);
-            height: max-content;
-            width: 80%;
-            border-radius: 1rem;
-            top: -500rem;
-            left: 50%;
-            padding: 1rem;
-            transform: translate(-50%);
-            z-index: 2000;
-            box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
-            transition: .5s ease-in-out;
-            
-            .navList {
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                margin: auto;
-                padding: .5rem 0;
-            
-                .navItem {
-                    padding: .5rem 0;
-            
-                    .navLink {
-                        font-weight: 600;
-                        font-size: .9rem;
-                        color: var(--textColor);
-            
-                        &:hover {
-                            color: var(--PrimaryColor);
-                        }
-                    }
+            box-shadow: 0 4px 4px rgba(2, 15, 29, 0.242);
+            border-radius: var(--border-radius);
+            padding: 10px 20px;
+            width: 200px;
+
+            ul {
+              li {
+                padding: 10px 0;
+
+                &:hover a {
+                  color: var(--PrimaryColor);
+                  transform: translateX(7px);
                 }
-            
-                .btn {
-                    margin-top: 1rem;
-            
-                    a {
-                        font-weight: 600;
-                        color: var(--whiteColor);
-                    }
+
+                .dropdownItem {
+                  display: flex;
+                  margin: 10px auto;
+                  a {
+                    max-width: 100px;
+                    margin-left: 10px;
+                    transition: 0.3s ease;
+                  }
                 }
+              }
             }
 
-            .closeNavbar{
-                position: absolute;
-                top: 1rem;
-                right: 1.5rem;
-                color: var(--PrimaryColor);
-
-                &:hover {
-                    color: var(--SecondaryColor);
-                }
+            &::before {
+              content: "";
+              position: absolute;
+              top: -5px;
+              right: 20px;
+              height: 20px;
+              width: 20px;
+              background: var(--secondary-bg);
+              transform: rotate(45deg);
             }
+
+            &.active {
+              opacity: 1;
+              visibility: visible;
+              transform: translateY(0);
+              transition: 0.5s ease;
+            }
+
+            &.inactive {
+              opacity: 0;
+              visibility: hidden;
+              transform: translateY(-20px);
+              transition: 0.5s ease;
+            }
+          }
+          .navLink {
+            color: var(--textColor);
+            padding: 0 0.45rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+
+            &:hover {
+              color: var(--PrimaryColor);
+            }
+          }
         }
 
-        .activeNavbar {
-            top: 7rem;
-        }
-        
-    }
+        .btn {
+          margin-left: 1rem;
 
-    .toggleNavbar{
-        .icon {
-                font-size: 25px;
-                color: var(--PrimaryColor);
-            }
-             &:hover.icon {
-                color: var(--SecondaryColor);
-            }
+          a {
+            color: var(--whiteColor);
+            font-weight: 500;
+          }
+        }
+      }
     }
+  }
 }
 
-@media screen and (min-width: 769px){
-    .toggleNavbar, .closeNavbar{
-        display: none;
-    }
-
-    .header{
-        padding: 1.5rem 2rem;
-
-        .navBar{
-            .navList{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: row;
-
-                .navItem{
-                    .navLink{
-                        color: var(--textColor);
-                        padding: 0 0.45rem;
-                        font-weight: 500;
-                        font-size: 0.9rem;
-
-                        &:hover{
-                            color: var(--PrimaryColor);
-                        }
-                    }
-                }
-
-                .btn{
-                    margin-left: 1rem;
-
-                    a{
-                        color: var(--whiteColor);
-                        font-weight: 500;
-                    }
-                }
-            }
+@media screen and (min-width: 960px) {
+  .header {
+    .navBar {
+      .navList {
+        .navItem {
+          padding: 0 0.7rem;
         }
+      }
     }
+  }
 }
 
-@media screen and (min-width: 960px){
-    .header{
-        .navBar{
-            .navList{
-                .navItem{
-                    padding: 0 0.7rem;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1240px){
-    .header{
-        padding: 1rem 8.5rem;
-    }
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 8.5rem;
+  }
 }

@@ -1,17 +1,27 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import "./navbar.scss";
 import { NavLink } from "react-router-dom";
-import {SiYourtraveldottv} from "react-icons/si";
-import {AiFillCloseCircle} from "react-icons/ai";
-import {TbGridDots} from "react-icons/tb";
+import { SiYourtraveldottv } from "react-icons/si";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { TbGridDots } from "react-icons/tb";
+
+const DropDownItem = (props) => {
+  return (
+    <li className="dropdownItem">
+      <NavLink to={props.page}> {props.text} </NavLink>
+    </li>
+  );
+};
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(false);
 
   const [active, setActive] = useState("navBar");
 
   const showNav = () => {
     setActive("navBar activeNavbar");
-  }
+  };
 
   const removeNav = () => {
     setActive("navBar");
@@ -46,14 +56,70 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="navItem">
-              <NavLink to="/shop" className="navLink">
-                Shop
-              </NavLink>
+              <div className="menu_trigger">
+                <NavLink
+                  className="navLink"
+                  onClick={() => {
+                    setOpen1(!open1);
+                  }}
+                  onMouseEnter={() => {
+                    setOpen1(true);
+                  }}
+                  onMouseLeave={() => {
+                    setOpen1(false);
+                  }}
+                >
+                  Shop
+                </NavLink>
+              </div>
+
+              <div className={`dropdown_menu ${open1 ? "active" : "inactive"}`}>
+                <ul
+                  onMouseEnter={() => {
+                    setOpen1(true);
+                  }}
+                  onMouseLeave={() => {
+                    setOpen1(false);
+                  }}
+                >
+                  <DropDownItem text="About Us" />
+                  <DropDownItem text="Our team" />
+                  <DropDownItem text="Contact Us" />
+                </ul>
+              </div>
             </li>
             <li className="navItem">
-              <NavLink to="/pages" className="navLink">
-                Pages
-              </NavLink>
+              <div className="menu_trigger">
+                <NavLink
+                  className="navLink"
+                  onClick={() => {
+                    setOpen(!open);
+                  }}
+                  onMouseEnter={() => {
+                    setOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    setOpen(false);
+                  }}
+                >
+                  Pages
+                </NavLink>
+              </div>
+
+              <div className={`dropdown_menu ${open ? "active" : "inactive"}`}>
+                <ul
+                  onMouseEnter={() => {
+                    setOpen(true);
+                  }}
+                  onMouseLeave={() => {
+                    setOpen(false);
+                  }}
+                >
+                  <DropDownItem text="About Us" />
+                  <DropDownItem text="Our team" />
+                  <DropDownItem page="/contact" text="Contact Us" />
+                </ul>
+              </div>
             </li>
             <li className="navItem">
               <NavLink to="/contact" className="navLink">
@@ -77,6 +143,6 @@ const Navbar = () => {
       </header>
     </section>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
