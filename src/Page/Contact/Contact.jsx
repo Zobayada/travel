@@ -96,7 +96,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="contactAddress">
+      <div className="contactAddress grid">
         <div className="inner">
           <div className="wrapper">
             <div className="first">

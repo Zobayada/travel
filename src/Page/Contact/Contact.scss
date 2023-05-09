@@ -256,7 +256,12 @@
       width: 100%;
 
       .wrapper {
-        display: flex;
+        display: grid;
+        flex-basis: 50%;
+        width: 100%;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
 
         .first {
           box-sizing: border-box;
@@ -393,6 +398,19 @@
   }
 }
 
+@media screen and (min-width: 840px) {
+  .contact {
+    .contactAddress {
+      .inner {
+        .wrapper {
+          grid-template-columns: repeat(3, 1fr);
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contact {
     .contactMsg {
@@ -414,6 +432,19 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    .contactAddress {
+      .inner {
+        .wrapper {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 3rem;
         }
       }
     }
