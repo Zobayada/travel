@@ -134,7 +134,7 @@
         .navItem {
           .dropdown_menu {
             position: absolute;
-            top: 70px;
+            top: 85px;
             background: var(--whiteColorDeam);
             box-shadow: 0 4px 4px rgba(2, 15, 29, 0.242);
             border-radius: var(--border-radius);
@@ -144,6 +144,10 @@
             ul {
               li {
                 padding: 10px 0;
+
+                a {
+                  color: var(--textColor);
+                }
 
                 &:hover a {
                   color: var(--PrimaryColor);
@@ -227,5 +231,16 @@
 @media screen and (min-width: 1240px) {
   .header {
     padding: 1rem 8.5rem;
+
+    .navBar {
+      .navList {
+
+        .navItem {
+          .dropdown_menu {
+            top: 70px;
+          }
+        }
+      }
+    }
   }
 }

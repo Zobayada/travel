@@ -82,9 +82,10 @@ const Navbar = () => {
                     setOpen1(false);
                   }}
                 >
-                  <DropDownItem text="About Us" />
-                  <DropDownItem text="Our team" />
-                  <DropDownItem text="Contact Us" />
+                  <DropDownItem text="Product List" />
+                  <DropDownItem text="Product Single" />
+                  <DropDownItem text="Shop Layout" />
+                  <DropDownItem text="Shop Page" />
                 </ul>
               </div>
             </li>
@@ -122,8 +123,8 @@ const Navbar = () => {
               </div>
             </li>
             <li className="navItem">
-              <NavLink to="/contact" className="navLink">
-                Contact
+              <NavLink to="/blog" className="navLink">
+                Blog
               </NavLink>
             </li>
 
